@@ -20,7 +20,7 @@ float BronjahmMultiplier::GetValue(Action* action) {
 
 float AttackFragmentMultiplier::GetValue(Action* action)
 {
-    auto isTank = botAI->IsTank();
+    auto isTank = botAI->IsTank(bot);
     if (isTank && dynamic_cast<AttackCorruptedSoulFragmentAction>(action))
         return 0.0f;
     return 1.0f; }
