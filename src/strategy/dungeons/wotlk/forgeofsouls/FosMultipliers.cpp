@@ -4,6 +4,7 @@
 #include "ChooseTargetActions.h"
 #include "MovementActions.h"
 #include "FosTriggers.h"
+#include "FosActions.h"
 
 
 float BronjahmMultiplier::GetValue(Action* action) {
@@ -21,6 +22,6 @@ float BronjahmMultiplier::GetValue(Action* action) {
 float AttackFragmentMultiplier::GetValue(Action* action)
 {
     auto isTank = botAI->IsTank(bot);
-    if (isTank && dynamic_cast<AttackCorruptedSoulFragmentAction>(action))
+    if (isTank && dynamic_cast<AttackCorruptedSoulFragmentAction*>(action))
         return 0.0f;
     return 1.0f; }

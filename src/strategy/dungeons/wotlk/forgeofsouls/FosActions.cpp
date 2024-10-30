@@ -28,3 +28,5 @@ bool AttackCorruptedSoulFragmentAction::Execute(Event event)
 
     return Attack(fragment);
 }
+
+bool AttackCorruptedSoulFragmentAction::isUseful() { return botAI->IsDps(bot); }
