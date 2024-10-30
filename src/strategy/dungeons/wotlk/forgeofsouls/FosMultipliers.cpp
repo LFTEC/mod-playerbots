@@ -8,7 +8,7 @@
 
 float BronjahmMultiplier::GetValue(Action* action) {
     Unit* boss = nullptr;
-    boss = AI_VALUE2(Unit *， "find target", "bronjahm");
+    boss = AI_VALUE2(Unit *, "find target", "bronjahm");
     if (boss && boss->HasUnitState(UNIT_STATE_CASTING) && boss->FindCurrentSpellBySpellId(SPELL_CORRUPT_SOUL))
     {
         if (dynamic_cast<MovementAction*>(action) && !dynamic_cast<MoveFromBronjahmAction*>(action))
