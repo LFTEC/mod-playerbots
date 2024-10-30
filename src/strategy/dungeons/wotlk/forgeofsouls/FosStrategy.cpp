@@ -11,6 +11,6 @@ void WotlkDungeonFosStrategy::InitTriggers(std::vector<TriggerNode*>& triggers) 
 
 void WotlkDungeonFosStrategy::InitMultipliers(std::vector<Multiplier*>& multipliers)
 {
-    multipliers.push_back(new BronjahmMultiplier(botAI);
+    multipliers.push_back(new BronjahmMultiplier(botAI));
     multipliers.push_back(new AttackFragmentMultiplier(botAI));
 }
