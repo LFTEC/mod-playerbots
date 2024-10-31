@@ -18,9 +18,17 @@ bool MoveFromBronjahmTrigger::IsActive()
 bool SwitchToSoulFragment::IsActive()
 {
     Unit* fragment = nullptr;
-    fragment = AI_VALUE2(Unit*, "find target", "corrupted soul fragment");
-    if (fragment)
-        return true;
+    GuidVector targets = AI_VALUE(GuidVector, "possible targets no los");
+
+    for (auto i = targets.begin(); i != targets.end(); ++i)
+    {
+        Unit* unit = botAI->GetUnit(*i);
+        if (unit && unit->GetEntry() == NPC_CORRUPTED_SOUL_FRAGMENT)
+        {
+            return true;
+        }
+    }
 
     return false;
+    
 }

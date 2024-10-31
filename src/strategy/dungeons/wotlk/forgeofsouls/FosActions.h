@@ -12,6 +12,7 @@ class MoveFromBronjahmAction : public MovementAction
 public:
     MoveFromBronjahmAction(PlayerbotAI* ai) : MovementAction(ai, "move from bronjahm") {}
     bool Execute(Event event) override;
+    bool isUseful() override;
 };
 
 class AttackCorruptedSoulFragmentAction : public AttackAction

@@ -9,6 +9,7 @@
 enum FosIDs
 {
     //Boss1
+    NPC_CORRUPTED_SOUL_FRAGMENT = 36535,
 
     SPELL_CORRUPT_SOUL = 68839
 };
