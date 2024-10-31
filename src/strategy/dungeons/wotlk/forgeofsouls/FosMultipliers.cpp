@@ -21,7 +21,7 @@ float BronjahmMultiplier::GetValue(Action* action) {
 
 float AttackFragmentMultiplier::GetValue(Action* action)
 {
-    if (botAI->IsHeal(bot))
+    if (botAI->IsHeal(bot) && dynamic_cast<AttackCorruptedSoulFragmentAction*>(action))
         return 0.0f;
 
     return 1.0f;
